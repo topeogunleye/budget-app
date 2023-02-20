@@ -3,6 +3,21 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# Add devise for authentication
+gem 'devise'
+
+# Add cancancan for authorization
+gem 'cancancan'
+
+gem 'dotenv-rails'
+
+# Add bootstrap for styling
+gem 'bootstrap', '~> 5.2'
+gem 'bootstrap_form', '~> 5.1'
+
+# Add rubocop
+gem 'rubocop', '>= 1.0', '< 2.0'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
@@ -49,6 +64,9 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'pry'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end

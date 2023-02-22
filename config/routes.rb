@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-  get 'pages/home'
-  get 'pages/categories'
-  get 'pages/transactions'
-  get 'pages/sessions'
-  get 'pages/categories_new'
-  get 'pages/transactions_new'
+  devise_for :users
+  root to: 'pages#home'
+
   authenticated :user do
     root to: 'categories#index', as: :authenticated_root
   end
-  root to: 'splashes#index'
+  get '/categories/new', to: 'categories#new'
+  post '/categories', to: 'categories#create'
+  
+  get '/transactions/new', to: 'transactions#new'
+  post '/transactions', to: 'transactions#create'
 
-  devise_for :users 
+  resources :categories, only: [:index, :show]
+  resources :transactions, only: [:show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end

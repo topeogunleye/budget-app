@@ -1,0 +1,23 @@
+<div class="content">
+  <% if @categories.empty? %>
+    <p class="no-categories">No categories for now</p>
+  <% else %>  
+    <div class="container">
+      <h1>Categories</h1>
+       <%= link_to "Add a New Category", categories_new_path, class: "btn btn-primary mb-3" %>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Icon</th>
+        </tr>
+        </thead>
+        <tbody>
+          <% @categories.each do |category| %>
+            <%= render partial: 'category', locals: { category: category } %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>

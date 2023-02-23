@@ -1,0 +1,30 @@
+<h1><%= @category.name %></h1>
+
+<p>Total amount: <%= number_to_currency(@category.total_amount) %></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Categories</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @expenditures.each do |expenditure| %>
+      <tr>
+        <td><%= expenditure.name %></td>
+        <td><%= number_to_currency(expenditure.amount) %></td>
+        <td>
+          <% expenditure.categories.each do |category| %>
+            <%= category.name %><br>
+          <% end %>
+        </td>
+        <td><%= expenditure.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Add a new expenditure", new_category_expenditure_path(@category), class: "btn btn-primary" %>

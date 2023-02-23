@@ -1,7 +1,7 @@
-class CreateTransactionCategories < ActiveRecord::Migration[7.0]
+class CreateExpenditureCategories < ActiveRecord::Migration[7.0]
   def change
-    create_table :transaction_groups do |t|
-      t.references :transaction, null: false, foreign_key: true
+    create_table :expenditure_groups do |t|
+      t.references :expenditure, null: false, foreign_key: true
       t.references :category, null: false, foreign_key: true
 
       t.timestamps

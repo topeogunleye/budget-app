@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def categories
   end
 
-  def transactions
+  def expenditures
   end
 
   def sessions
@@ -14,6 +14,6 @@ class PagesController < ApplicationController
   def categories_new
   end
 
-  def transactions_new
+  def expenditures_new
   end
 end

@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   get '/categories/new', to: 'categories#new'
   post '/categories', to: 'categories#create'
   
-  get '/transactions/new', to: 'transactions#new'
-  post '/transactions', to: 'transactions#create'
+  get '/expenditures/new', to: 'expenditures#new'
+  post '/expenditures', to: 'expenditures#create'
 
   resources :categories, only: [:index, :show]
-  resources :transactions, only: [:show]
+  resources :expenditures, only: [:show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end

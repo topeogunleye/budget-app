@@ -15,9 +15,9 @@ RSpec.describe "Pages", type: :request do
     end
   end
 
-  describe "GET /transactions" do
+  describe "GET /expenditures" do
     it "returns http success" do
-      get "/pages/transactions"
+      get "/pages/expenditures"
       expect(response).to have_http_status(:success)
     end
   end
@@ -36,9 +36,9 @@ RSpec.describe "Pages", type: :request do
     end
   end
 
-  describe "GET /transactions_new" do
+  describe "GET /expenditures_new" do
     it "returns http success" do
-      get "/pages/transactions_new"
+      get "/pages/expenditures_new"
       expect(response).to have_http_status(:success)
     end
   end

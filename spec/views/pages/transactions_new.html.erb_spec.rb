@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe "pages/transactions_new.html.erb", type: :view do
+RSpec.describe "pages/expenditures_new.html.erb", type: :view do
   pending "add some examples to (or delete) #{__FILE__}"
 end

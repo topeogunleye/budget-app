@@ -6,9 +6,8 @@ class Category < ApplicationRecord
   has_one_attached :icon
 
   validates :name, :icon, presence: true
-  
+
   def total_amount
     expenditures.sum(:amount)
   end
-
 end

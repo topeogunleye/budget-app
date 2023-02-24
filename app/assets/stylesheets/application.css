@@ -14,7 +14,21 @@
  *= require_self
  */
  @import "custom";
+ @import "font-awesome";
 
  .navbar.navbar-expand-lg.navbar-light.bg-light {
   background-color: #3778c2 !important;
+}
+
+body {
+  box-sizing: border-box;
+  color: #434b54 !important;
+}
+
+.primary {
+  background-color: #3778c2 !important;
+}
+
+.secondary {
+  background-color: #5fb523 !important;
 }

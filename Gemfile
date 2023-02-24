@@ -13,6 +13,9 @@ gem 'cancancan'
 
 gem 'dotenv-rails'
 
+# Add font-awesome for icons
+gem 'font-awesome-rails'
+
 # Add bootstrap for styling
 gem 'bootstrap', '~> 5.2'
 gem 'bootstrap_form', '~> 5.1'

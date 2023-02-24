@@ -4,7 +4,6 @@
   <% else %>  
     <div class="container">
       <h1>Categories</h1>
-       <%= link_to "Add a New Category", categories_new_path, class: "btn btn-primary mb-3" %>
       <table class="table">
         <thead>
         <tr>
@@ -21,3 +20,7 @@
     </div>
   <% end %>
 </div>
+
+<footer>
+  <%= link_to 'ADD A NEW CATEGORY', categories_new_path, class: 'btn btn-primary' %>
+</footer>

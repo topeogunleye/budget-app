@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ @import "custom";
+
+ .navbar.navbar-expand-lg.navbar-light.bg-light {
+  background-color: #3778c2 !important;
+}

@@ -1,4 +1,4 @@
-class CreateExpenditureCategories < ActiveRecord::Migration[7.0]
+class CreateExpendituresCategories < ActiveRecord::Migration[7.0]
   def change
     create_table :expenditure_groups do |t|
       t.references :expenditure, null: false, foreign_key: true

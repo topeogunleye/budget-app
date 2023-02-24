@@ -1,4 +1,6 @@
 <tr>
   <td><%= link_to category.name, category_path(category) %></td>
-  <td><i class="<%= category.icon %>"></i></td>
+  <td>          <% if category.icon.attached? %>
+          <%= image_tag(category.icon)%>
+          <% end%></td>
 </tr>

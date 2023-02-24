@@ -13,10 +13,10 @@
  *= require_tree .
  *= require_self
  */
- @import "custom";
- @import "font-awesome";
+@import "custom";
+@import "font-awesome";
 
- .navbar.navbar-expand-lg.navbar-light.bg-light {
+.navbar.navbar-expand-lg.navbar-light.bg-light {
   background-color: #3778c2 !important;
 }
 

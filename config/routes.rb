@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   end
   get '/categories/new', to: 'categories#new'
   post '/categories', to: 'categories#create'
-  
+
   get '/expenditures/new', to: 'expenditures#new'
   post '/expenditures', to: 'expenditures#create'
 
-  resources :categories, only: [:index, :show]
+  resources :categories, only: %i[index show]
   resources :expenditures, only: [:show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 end

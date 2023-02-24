@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Expenditure, type: :model do
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
+  let(:category) { create(:category, user:) }
   let(:expenditure) { create(:expenditure, author: user) }
 
   describe 'associations' do

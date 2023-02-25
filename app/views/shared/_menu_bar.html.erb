@@ -1,6 +1,6 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Transactions Manager</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark primary d-flex justify-content-between">
+    <%= link_to "Transactions Manager", root_path, class: "nav-link" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -13,7 +13,7 @@
             <%= link_to "New Category", categories_new_path, class: "nav-link" %>
           </li>
           <li class="nav-item <%= 'active' if current_page?(destroy_user_session_path) %>">
-            <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
           </li>
         <% else %>
           <li class="nav-item <%= 'active' if current_page?(new_user_registration_path) %>">

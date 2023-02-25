@@ -52,13 +52,13 @@ ActiveRecord::Schema[7.0].define(version: 20_230_223_110_259) do
     t.index ['user_id'], name: 'index_categories_on_user_id'
   end
 
-  create_table 'expenditure_groups', force: :cascade do |t|
+  create_table 'expenditure_categories', force: :cascade do |t|
     t.bigint 'expenditure_id', null: false
     t.bigint 'category_id', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index ['category_id'], name: 'index_expenditure_groups_on_category_id'
-    t.index ['expenditure_id'], name: 'index_expenditure_groups_on_expenditure_id'
+    t.index ['category_id'], name: 'index_expenditure_categories_on_category_id'
+    t.index ['expenditure_id'], name: 'index_expenditure_categories_on_expenditure_id'
   end
 
   create_table 'expenditures', force: :cascade do |t|
@@ -87,7 +87,7 @@ ActiveRecord::Schema[7.0].define(version: 20_230_223_110_259) do
   add_foreign_key 'active_storage_attachments', 'active_storage_blobs', column: 'blob_id'
   add_foreign_key 'active_storage_variant_records', 'active_storage_blobs', column: 'blob_id'
   add_foreign_key 'categories', 'users'
-  add_foreign_key 'expenditure_groups', 'categories'
-  add_foreign_key 'expenditure_groups', 'expenditures'
+  add_foreign_key 'expenditure_categories', 'categories'
+  add_foreign_key 'expenditure_categories', 'expenditures'
   add_foreign_key 'expenditures', 'users', column: 'author_id'
 end

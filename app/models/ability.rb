@@ -5,7 +5,7 @@ class Ability
     return unless user.present?
 
     can :manage, Expenditure, author: user
-    can :manage, Category, user:
+    can :manage, Category, user: user
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?

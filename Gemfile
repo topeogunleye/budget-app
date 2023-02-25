@@ -95,6 +95,6 @@ group :test do
   gem 'faker'
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'webdrivers'
 end

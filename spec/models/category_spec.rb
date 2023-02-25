@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   let(:user) { create(:user) }
-  let(:category) { create(:category, user: user) }
+  let(:category) { create(:category, user:) }
 
   describe 'associations' do
     it { is_expected.to belong_to(:user) }
@@ -12,5 +12,4 @@ RSpec.describe Category, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:name) }
   end
-  
 end

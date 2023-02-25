@@ -93,7 +93,6 @@ group :test do
   gem 'database_cleaner-active_record', '~> 2.1'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'webdrivers'

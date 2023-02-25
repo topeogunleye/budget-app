@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe Category, type: :model do
+RSpec.describe User, type: :model do
   subject { FactoryBot.create(:user, :confirmed) }
 
   before { subject.save }
 
-  it 'should have a name' do
+  it 'name should be present' do
     subject.name = nil
-    expect(subject).not_to be_valid
+    expect(subject).to_not be_valid
   end
 end

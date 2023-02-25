@@ -1,5 +1,5 @@
-<div>
-  <%= form_with(model: expenditure) do |form| %>
+<div class="container">
+  <%= bootstrap_form_with(model: expenditure) do |form| %>
     <nav class="nav-link">
      <%= link_to expenditures_path do%>
      <i class="fas fa-arrow-left"></i>
@@ -13,7 +13,7 @@
       <%= form.text_field :name, autofocus: true, placeholder: "Name", class: "input", required: true %>
       <%= form.number_field :amount, placeholder: "Amount", class: "input", required: true %>
       <%= form.collection_select :category_ids, current_user.categories.order(:name), :id, :name, {}, { class: "input", multiple: true } %>
-        <%= form.submit "Save", class: "btn btn-primary" %>
+        <%= form.submit "Save", class: "btn btn-success w-100" %>
     </div>
   <%end%>
 </div>

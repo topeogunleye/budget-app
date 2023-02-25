@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Link](https://expenditor.herokuapp.com/)
+- [Live Link](https://intense-hamlet-04692.herokuapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -59,6 +59,10 @@
 
 - [Live Link](https://intense-hamlet-04692.herokuapp.com/)
 
+## Video Demo <a name="video-demo"></a>
+
+- [Video Demo](https://www.loom.com/share/729301318d2d464a92d30a748864040e)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->

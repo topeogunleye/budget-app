@@ -1,26 +1,15 @@
 <div class="content">
   <% if @categories.empty? %>
     <p class="no-categories">No categories for now</p>
-  <% else %>  
-    <div class="container">
-      <h1>Categories</h1>
-      <table class="table">
-        <thead>
-        <tr>
-          <th>Name</th>
-          <th>Icon</th>
-        </tr>
-        </thead>
-        <tbody>
-          <% @categories.each do |category| %>
-            <%= render partial: 'category', locals: { category: category } %>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+  <% else %>
+    <ul class="categories-list w-90 align-items-center">
+      <% @categories.each do |category| %>
+        <%= render partial: 'category', locals: { category: category } %>
+      <% end %>
+    </ul>
   <% end %>
 </div>
 
 <footer>
-  <%= link_to 'ADD A NEW CATEGORY', categories_new_path, class: 'btn btn-success w-100' %>
+  <%= link_to 'ADD A NEW CATEGORY', categories_new_path, class: 'btn btn-secondary' %>
 </footer>

@@ -1,25 +1,19 @@
 <div class="container">
-  <h2>expenditures</h2>
+  <h2>Expenditures</h2>
   <%= link_to "Add Expenditure",  expenditures_new_path %>
   <% if @category.expenditures.any? %>
-    <table class="table">
-      <thead>
-        <tr>
+        <header>
           <th>Name</th>
           <th>Amount</th>
           <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
+        </header>
         <% @category.expenditures.order(created_at: :desc).each do |expenditure| %>
-          <tr class="shadow p-3 mb-5 bg-white rounded h-210 mb-3 m-2 p-4 card is-flex is-justify-content-space-between">
-            <td><%= expenditure.name %></td>
-            <td><%= number_to_currency(expenditure.amount) %></td>
-            <td><%= expenditure.created_at.strftime("%m/%d/%Y") %></td>
-          </tr>
+            <div class="card is-flex is-justify-content-space-between">
+              <td><%= expenditure.name %></td>
+              <td><%= number_to_currency(expenditure.amount) %></td>
+              <td><%= expenditure.created_at.strftime("%m/%d/%Y") %></td>
+            </div>
         <% end %>
-      </tbody>
-    </table>
   <% else %>
     <p>No expenditures found for this category.</p>
   <% end %>

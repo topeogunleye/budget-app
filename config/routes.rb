@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  match '*unmatched', to: 'application#not_found_method', via: :all
   devise_for :users
   root to: 'pages#home'
 

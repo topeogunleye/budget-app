@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Categories</h1>
+  <%= link_to "Add a New Category", new_category_path, class: "btn btn-primary mb-3" %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Icon</th>
+        <th>Total Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= link_to category.name, category_expenditures_path(category) %></td>
+          <td><i class="<%= category.icon %>"></i></td>
+          <td><%= category.total_amount %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

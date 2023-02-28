@@ -1,0 +1,15 @@
+<div class="content">
+  <% if @categories.empty? %>
+    <p class="no-categories">No categories for now</p>
+  <% else %>
+    <ul class="categories-list w-90 align-items-center">
+      <% @categories.each do |category| %>
+        <%= render partial: 'category', locals: { category: category } %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<footer>
+  <%= link_to 'ADD A NEW CATEGORY', categories_new_path, class: 'btn btn-secondary' %>
+</footer>

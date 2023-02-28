@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Add a New Category</h1>
+<%= bootstrap_form_with model: @category, html: {multipart: true} do |form| %>
+    <%= form.text_field :name, class: "form-control" %>
+    <%= form.file_field :icon %>
+    <%= form.submit "Save", class: "btn btn-success w-100" %>
+<% end %>
+</div>
